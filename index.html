@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de PDFs</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<div class="containerDatos">
+        <h3>Formulario datos</h3>
+        <div class="tablaInserts">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><label for="curso">Curso</label></th>
+                        <td><input type="text" id="curso"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="nombre">Nombre</label></th>
+                        <td><input type="text" id="nombre"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="apellido">Apellido</label></th>
+                        <td><input type="text" id="apellido"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="nombreAsignatura">Asignatura</label></th>
+                        <td><input type="text" id="asignatura"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="nota">Nota</label></th>
+                        <td><input type="text" id="nota"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="evaluacion">Evaluación</label></th>
+                        <td><input type="number"  id="evaluacion"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="botonDisplay">
+                <input id="add-data" 
+                type="submit" 
+                value="Añadir datos" 
+                onclick="accionUsuario(event)">
+            </div>
+        </div>
+        <div class="tablaDatos" id="table-alumno">
+            <h3>Lista Alumnos</h3>
+            <table  id="tableAlumnos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Curso</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Asignatura</th>
+                        <th>Nota</th>
+                        <th>Evaluación</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="botonDisplay">
+            <input id="btn-genera-pdf" 
+            type="submit" 
+            value="Generar pdf"
+            onclick="generarPDF(event)">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.19/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
